@@ -1,0 +1,95 @@
+<!--Create our document type.  This will tell the browser what type of page and what version of HTML we are using-->
+<!DOCTYPE html>
+<!--This will contain our HTML code-->
+<html lang="en">
+<!--Head of the HTML page to show meta data and document title-->
+<head>
+    <!--Set the character encoding-->
+    <meta charset="UTF-8">
+    <!-- This allows the page to be responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the site-->
+    <title>Bots & Books</title>
+    <link rel="stylesheet" href="styles.css"
+</head>
+<!--Here is where the content and meat of the page will reside-->
+<!--Let's style the body tag with in-line css-->
+<body style="font-family: Arial, Helvetica, sans-serif; margin: 20px;">
+    <header>
+        <h1 style="text-align: center; font-size: 3.6em; color:burlywood;">Welcome to Bots & Books</h1>
+        <h3 style="text-align: center; font-size: 1.2em; color:brown;">Enjoy our collection of the most interesting AI generated short stories</h3>
+    </header>
+    <!-- Now let's create our main content section-->
+    <!-- Will now use a div tag to divide up the page into usable sections-->
+    <!-- This will be our first book and it's content-->
+    <div style="margin-bottom: 20px;">
+        <!--Create a link to download our first story or upload?-->
+        <a href="#book1" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">Download your book: What does it mean to be human</a>
+        <p id="book1" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
+    </div>
+        <div style="margin-bottom: 20px;">
+        <!--Create a link to download our first story or upload?-->
+        <a href="#book2" onclick="downloadBook('book1');" style="font-size: 1.em; color: rgb(25, 0, 255);">Download your book: What does it mean to be human</a>
+        <p id="book2" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
+    </div>
+        <div style="margin-bottom: 20px;">
+        <!--Create a link to download our first story or upload?-->
+        <a href="#book3" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">Download your book: What does it mean to be human</a>
+        <p id="book3" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
+    </div>
+        <div style="margin-bottom: 20px;">
+        <!--Create a link to download our first story or upload?-->
+        <a href="#book4" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">Download your book: What does it mean to be human</a>
+        <p id="book4" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
+    </div>
+    <!-- Javascript allows your webpage to be more interactive like a web application -->
+    <!-- using the javascript function that allows users to download our stories as text files-->
+    <script>
+        //Create a function that will take the story id and download the text file for the user to view at their convenience
+        function downloadBook(bookId){
+            //Get the book content by using the book id for that book.
+            var bookContent = document.getElementById(bookId).innerText;
+            //Create a new blob object that will contain the book content
+            var blob = new Blob([bookContent], {type: "text/plain"});
+            //Create a new URL link object that will contain the blob object
+            var link = document.createElement("a");
+            // set the link's href attribute to the URL object that contains the blob object
+            link.href = URL.createObjectURL(blob);
+            // set the links download attribute to the title of the book
+            link.download = bookId + ".txt";
+            // Now let's progamitically click the link to download the book.
+            // notice the download the book as a text file, the user is not dowing this manually
+            link.click();
+        }
+    </script>
+    <!--
+    <div class="book-carousel">
+        <div class="book">
+          <img src="book1.jpg" alt="Book 1">
+          <h3>Book Title 1</h3>
+          <p>Book Description...</p>
+        </div>
+        <div class="book">
+          <img src="book2.jpg" alt="Book 2">
+          <h3>Book Title 2</h3>
+          <p>Book Description...</p>
+        </div> 
+        
+      </div> 
+    
+      <div class="upload-container">
+        <h2>Upload Your Book</h2>
+        <input type="file" id="book-upload" accept=".epub,.pdf,.mobi">
+        <label for="book-upload">Choose File</label>
+      </div>
+    
+      <div class="download-container">
+        <h2>Download Books</h2>
+        <a href="#" download>Download Book 1</a>
+        <a href="#" download>Download Book 2</a>
+        
+      </div>
+    
+      <script src="script.js"></script> -->
+</body>
+</html>

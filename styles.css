@@ -1,35 +1,80 @@
+.body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.button {
+  position: relative; /* Set button in right position */
+  width: 40px; /* Width of button */
+  height: 40px; /* Height of button */
+  /* Style button */
+  background: #127357;
+  color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 16px;
+  opacity: 0.5;
+}
+#button-back {
+  right: calc(100% - 8px); /* For set button in left position */
+  border-radius: 0 50% 50% 0; /* Set border radius */
+}
+
+#button-next {
+  right: 55px; /* For set button in right position */
+  border-radius: 50% 0 0 50%; /* Set border radius */
+}
 /* Book Carousel Styles */
-.book-carousel {
+.carousel {
+    width: 100%; /* This is the width of the carousel*/
+    height: 166px; /* this is the height of the carousel */
+    display: flex; /* this sets the elements on the card */
+    align-items: center; /* this centers the elements on the card */
+ } 
+
+.card-container {
+    width: calc(100% -16px); /* width of card container */
+    margin: 8px; /*sets a margin around the card */
+    display: flex; /*set inline elements of the cardheight: 166px; /* height of the card container */
+    flex: 0 0 calc(100% - 16px); /*helps align the width of the container */
+    overflow-x: auto; /* Set overflow in the horizontal scroll */
+    overflow-y: hidden; /* hides the vertical scroll option */
+    scroll-snap-type: x mandatory; /* forces the scroll to snap to the start of the scroll bar */
+    gap: 8px; /* sets the space between cards */
+ }
+
+.card-container::-webkit-scrollbar {
+    display: none; /* this should hide the scrollbar on various browsers*/
+ }
+.card {
+    min-width: 250px; /* Set min width of card */
+    height: 250px; /* Set height of the card */
+    scroll-snap-type: start; /* focus the start at the beginning of the scroll*/
+    /* Style card */
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-  }
-  
-  .book-carousel .book {
-    flex: 0 0 300px; /* Adjust width as needed */
-    margin-right: 20px;
-    scroll-snap-align: center;
-  }
-  
-  .book img {
-    width: 100%;
-    height: auto;
-  }
-  
+    justify-content: center;
+    align-items: center;
+    background:burlywood;
+    border: 1px solid #01050f;
+    color: #ffffff;
+    border-radius: 8px
+ }
+.card:hover {
+    background: brown; /* Set background color when hover */
+}
   /* Upload/Download Styles */
-  .upload-container,
-  .download-container {
+.upload-container, .download-container {
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 5px;
   }
   
-  .upload-container input[type="file"] {
+.upload-container input[type="file"] {
     display: none;
   }
   
-  .upload-container label {
+.upload-container label {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;

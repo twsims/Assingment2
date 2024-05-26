@@ -1,6 +1,4 @@
-<!--Create our document type.  This will tell the browser what type of page and what version of HTML we are using-->
 <!DOCTYPE html>
-<!--This will contain our HTML code-->
 <html lang="en">
 <!--Head of the HTML page to show meta data and document title-->
 <head>
@@ -10,55 +8,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title of the site-->
     <title>Bots & Books</title>
-    <link rel="stylesheet" href="styles.css"
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
 </head>
 <!--Here is where the content and meat of the page will reside-->
 <!--Let's style the body tag with in-line css-->
 <body style="font-family: Arial, Helvetica, sans-serif; margin: 20px;">
+    
     <header>
-        <h1 style="text-align: center; font-size: 3.6em; color:burlywood;">Welcome to Bots & Books</h1>
-        <h3 style="text-align: center; font-size: 1.2em; color:brown;">Enjoy our collection of the most interesting AI generated short stories</h3>
-    </br></br><br>
+        <h1 style="text-align: center; font-size: 5.6em; color:rgb(56, 47, 38);">Welcome to Bots & Books</h1>
+        <br><br>
     </header>
-    <!-- Now let's create our main content section-->
-    <!-- Will now use a div tag to divide up the page into usable sections-->
-    <!-- This will be our first book and it's content-->
-    <div class="carousel">
-        <div class="card-container">
-          <div class="card">        
-            <!--Create a link to download our first story or upload?-->
-            <a href="#book1" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">What does it mean to be human</a>
-            <p id="book1" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
-          </div>
-
-          <div class="card">
-            <!--Create a link to download our first story or upload?-->
-            <img src="/"
-            <a href="#book2" onclick="downloadBook('book1');" style="font-size: 1.em; color: rgb(25, 0, 255);">What does it mean to be human</a>
-            <p id="book2" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
-          </div>
-          
-          <div class="card">
-            <!--Create a link to download our first story or upload?-->
-            <a href="#book3" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">What does it mean to be human</a>
-            <p id="book3" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
-          </div>
-          
-          <div class="card">
-            <!--Create a link to download our first story or upload?-->
-            <a href="#book4" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">What does it mean to be human</a>
-            <p id="book4" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
-          </div>
-          
-          <div class="card">
-            <!--Create a link to download our first story or upload?-->
-            <a href="#book5" onclick="downloadBook('book1');" style="font-size: 1.em; color: blue;">What does it mean to be human</a>
-            <p id="book5" style="display: none;">In a small village surrounded by dense woods, a young girl named Emily discovered an ancient map that led to a mysterious forest filled with magical creatures and hidden treasures. Her journey through the forest revealed secrets of her ancestors and unlocked powers she never knew she had.</p>
-          </div>
-        <button class="button" id="button-back"></button>
-        <button class="button" id="button-next"></button>
-        </div>    
+    <!-- main content section-->
+    <!-- Divide up the page into usable sections-->
+    <!-- This will be our first book and its content-->
+    <div class="list-group">
+        <div class="list-group-item" style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Image on the right side -->
+            <div style="text-align: center;">
+                <a href="#book1" onclick="downloadBook('book1');">
+                    <img src="/Against the Odds.jpg" alt="Against the Odds" style="width: 100px; height: auto;">
+                </a>
+                <!-- Link as a button underneath the image -->
+                <br>
+                <a href="#book1" onclick="downloadBook('book1');" style="font-size: 1em; color: rgb(247, 247, 252);">Against The Odds</a>
+            </div>
+            <!-- Summary in the paragraph tag on the left -->
+            <p id="book1" style="max-width: 90%; margin-left: 20px;"> <b>Summary:</b> From the shadows of a troubled childhood and the challenges of foster care, Jake's journey is one of remarkable resilience and triumph. Follow his inspiring path as he transforms adversity into opportunity, achieving success and returning to uplift others, proving that even from the hardest beginnings, a meaningful and impactful life can be forged. Dive into "Against the Odds" for a heartwarming tale of hope, perseverance, and the power of giving back.</p>
+        </div>
+        <div class="list-group-item" style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Image on the right side -->
+            <div style="text-align: center;">
+                <a href="#book2" onclick="downloadBook('book2');">
+                    <img src="/TSJourney.jpg" alt="The Strategist's Journey" style="width: 100px; height: auto;">
+                </a>
+                <!-- Link as a button underneath the image -->
+                <br>
+                <a href="#book2" onclick="downloadBook('book2');" style="font-size: 1em; color: rgb(247, 247, 252);">The Strategist's Journey</a>
+            </div>
+            <!-- Summary in the paragraph tag on the left -->
+            <p id="book2" style="max-width: 90%; margin-left: 20px;"> <b>Summary:</b> In "The Strategist's Journey," we follow Olivia Hart, a recent college graduate, as she navigates the exhilarating and often challenging world of corporate strategy in Nashville, Tennessee. With a blend of ambition, creativity, and determination, Olivia takes on her first major role as a lead strategist for a burgeoning tech startup. Along the way, she encounters unexpected obstacles, forms new relationships, and discovers the true meaning of leadership and innovation. This compelling tale is a testament to the resilience and courage of young professionals stepping into their careers and making their mark on the world.</p>
+        </div>
+        <div class="list-group-item" style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Image on the right side -->
+            <div style="text-align: center;">
+                <a href="#book3" onclick="downloadBook('book5');">
+                    <img src="/RebirthofaHero.jpg" alt="The Strategist's Journey" style="width: 100px; height: auto;">
+                </a>
+                <!-- Link as a button underneath the image -->
+                <br>
+                <a href="#book3" onclick="downloadBook('book3');" style="font-size: 1em; color: rgb(247, 247, 252);">Rebirth of a Hero</a>
+            </div>
+            <!-- Summary in the paragraph tag on the left -->
+            <p id="book3" style="max-width: 90%; margin-left: 20px;"> <b>Summary:</b> In the bustling city of Valtoria, young Leo's life was cut short by a crippling disease. But fate grants him a miraculous second chance in a new world, where magic and medieval splendor coexist. Reborn with the knowledge of his previous life, Leo is determined to transform society for the better. Guided by his love for the compassionate Aria and supported by the loyal warrior Kael, Leo faces formidable adversaries and relentless challenges. Together, they build a thriving community that champions knowledge, equality, and compassion. Join Leo on an epic journey of resilience, love, and the unyielding belief in a brighter future. Witness the rise of a true hero in a tale where intellect, heart, and courage redefine destiny.</p>
+        </div>
+        <div class="list-group-item" style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Image on the right side -->
+            <div style="text-align: center;">
+                <a href="#book4" onclick="downloadBook('book4');">
+                    <img src="/SeedsofHope.jpg" alt="Seeds of Hope" style="width: 100px; height: auto;">
+                </a>
+                <!-- Link as a button underneath the image -->
+                <br>
+                <a href="#book4" onclick="downloadBook('book4');" style="font-size: 1em; color: rgb(247, 247, 252);">Seeds of Hope</a>
+            </div>
+            <!-- Summary in the paragraph tag on the left -->
+            <p id="book4" style="max-width: 90%; margin-left: 20px;"> <b>Summary:</b> Sarah Williams starts a non-profit organization, "Seeds of Hope," in her struggling hometown of Riverbend, overcoming numerous challenges to transform an old community center into a vibrant hub that restores hope and unity among residents. Through determination, community support, and relentless effort, she revitalizes the town and plants the seeds for a brighter future.</p>
+        </div>
+        <div class="list-group-item" style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Image on the right side -->
+            <div style="text-align: center;">
+                <a href="#book5" onclick="downloadBook('book5');">
+                    <img src="/RisingStar.jpg" alt="Rising Star" style="width: 100px; height: auto;">
+                </a>
+                <!-- Link as a button underneath the image -->
+                <br>
+                <a href="#book5" onclick="downloadBook('book5');" style="font-size: 1em; color: rgb(247, 247, 252);">Rising Star</a>
+            </div>
+            <!-- Summary in the paragraph tag on the left -->
+            <p id="book5" style="max-width: 90%; margin-left: 20px;"> <b>Summary:</b> Marcus Green, a talented young basketball player from Atlanta, overcomes a devastating ACL injury, intense competition, and personal heartbreak to fulfill his dream of being selected as a lottery pick in the 2028 NBA Draft. His journey is a testament to resilience, determination, and the power of unwavering support.</p>
+        </div>
     </div>
+    
     <!-- Javascript allows your webpage to be more interactive like a web application -->
     <!-- using the javascript function that allows users to download our stories as text files-->
       
